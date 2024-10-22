@@ -15,7 +15,7 @@ class GameMusicManager {
         
         // Initialize the audio
         this.backgroundMusic = new Audio();
-        this.backgroundMusic.src = 'music.mp3'; // Replace with your music file
+        this.backgroundMusic.src = './assets/music/music.mp3'; // Replace with your music file
         this.backgroundMusic.loop = true;
         this.backgroundMusic.volume = 0.5;
     }
