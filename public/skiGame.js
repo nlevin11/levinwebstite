@@ -2,6 +2,11 @@ let canvas, ctx, restartBtn, playBtn;
 let skier, rocks, gameSpeed, gravity, score, gameOver, gameStarted = false;
 let backgroundImg, skierImg, rockImg;
 
+import GameMusicManager from './gameMusic.js';
+
+// Create music manager instance
+const musicManager = new GameMusicManager();
+
 // Load images
 function loadImages() {
     backgroundImg = new Image();
@@ -16,6 +21,7 @@ function loadImages() {
 
 // Initialize Game Variables
 function initGame() {
+    
     canvas = document.getElementById('skiGame');
     ctx = canvas.getContext('2d');
     restartBtn = document.getElementById('restartGame');
@@ -29,6 +35,7 @@ function initGame() {
     gameOver = false;
 
     restartBtn.style.display = 'none'; // Hide restart button initially
+    musicManager.startGameMusic();
     updateGame(); // Start game loop
 }
 
@@ -100,6 +107,7 @@ function updateGame() {
             gameOver = true;
             alert('Game Over! You hit a rock.');
             restartBtn.style.display = 'block';
+            musicManager.stopGameMusic();
             return;
         }
 
