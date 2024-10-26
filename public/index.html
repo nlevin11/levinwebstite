@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nathaniel's Website</title>
-    
+
     <style>
         body {
             background-image: url('./assets/images/mountain.jpg'); /* Ensure this path is correct */
@@ -21,6 +21,18 @@
             align-items: center; /* Center horizontally */
             justify-content: center; /* Center vertically */
         }
+        #globalCounter {
+            position: fixed;
+            top: 20px;
+            left: 20px;  /* Changed from right to left */
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
     </style>
 </head>
 <body>
@@ -28,6 +40,9 @@
     <p>Welcome to my website!</p>
 
     <h2>Skier Game</h2>
+
+    <!-- Add the global counter display -->
+    <div id="globalCounter">Global Games Played: 0</div>
     
     <!-- "Play Game" Button -->
     <button id="playGame">Play Game</button>
@@ -40,5 +55,6 @@
 
     <!-- Link to external JS file -->
     <script type="module" src="skiGame.js"></script>
+
 </body>
 </html>

@@ -15,19 +15,6 @@ body {
     animation: shimmer 3s infinite; /* Apply shimmer animation */
 }
 
-/* Keyframes for shimmering effect */
-@keyframes shimmer {
-    0% {
-        filter: brightness(80%);
-    }
-    50% {
-        filter: brightness(120%);
-    }
-    100% {
-        filter: brightness(80%);
-    }
-}
-
 /* Optional: Add styling for text elements */
 h1, p {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Make text more readable */
